@@ -3,19 +3,6 @@ code: testAgain_bundle
 description: This is the testAgain bundle
 
 components:
-  service:
-    image: FIXME
-    ingressPath: /testAgain
-    healthCheckPath: /actuator/health
-    dbms: mysql
-    roles:
-    - name: testAgain-admin
-      code: "testAgain-admin"
-    - name: conference-admin
-      code: "conference-admin"
-/* entando-needle-descriptor-add-roles - Entando blueprint will add roles here */
-
-    permissions: []
 
   widgets:
     -ui/widgets/conference/tableWidget/table-widget.yaml
