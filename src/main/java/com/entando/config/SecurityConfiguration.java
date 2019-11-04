@@ -27,11 +27,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         this.tokenProvider = tokenProvider;
         this.problemSupport = problemSupport;
     }
-    @Override
-    public void configure(WebSecurity web) {
-        web.ignoring()
-            .antMatchers("/h2-console/**");
-    }
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
@@ -58,6 +53,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         .and()
             .authorizeRequests()
             .antMatchers("/api/authenticate").permitAll()
+            .antMatchers(HttpMethod.OPTIONS,"/api/**").permitAll()
             .antMatchers("/api/**").authenticated()
             .antMatchers("/management/health").permitAll()
             .antMatchers("/management/info").permitAll()
