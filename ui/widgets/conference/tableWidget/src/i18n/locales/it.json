@@ -1,0 +1,12 @@
+{
+  "common": {
+    "couldNotFetchData": "Errore durante la connessione al server"
+  },
+  "entities": {
+    "conference": {
+      "noItems": "Nessun conference disponibile",
+      "id": "ID",
+      "asdf": "entities.conference.asdf"
+    }
+  }
+}
